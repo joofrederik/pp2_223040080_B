@@ -21,22 +21,22 @@ public class JenisMemberButtonUpdateActionListener implements ActionListener {
         int selectedRow = table.getSelectedRow();
 
         if (selectedRow != -1) {
-            // Get the selected member from the table
+         
             JenisMember jenisMemberToUpdate = jenisMemberFrame.getJenisMemberAt(selectedRow);
 
-            // Get updated values from the text field and combo box
+            
             String newNama = jenisMemberFrame.getNama();
             JenisMember newJenisMember = jenisMemberFrame.getJenisMember();
 
             if (!newNama.isEmpty()) {
-                // Update the member object with new values
+                
                 jenisMemberToUpdate.setNama(newNama);
                 jenisMemberToUpdate.setJenisMember(newJenisMember);
 
-                // Update the member in the database
+           
                 jenisMemberFrame.updateJenisMember(jenisMemberToUpdate);
 
-                // Show success message
+             
                 jenisMemberFrame.showAlert("Member Berhasil Diupdate");
             } else {
                 jenisMemberFrame.showAlert("Nama tidak boleh kosong");
