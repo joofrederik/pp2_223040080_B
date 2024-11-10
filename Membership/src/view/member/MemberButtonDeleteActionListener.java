@@ -22,7 +22,7 @@ public class MemberButtonDeleteActionListener implements ActionListener {
         if (selectedRow == -1) {
             memberFrame.showAlert("Silakan pilih member yang ingin dihapus.");
         } else {
-            // Get selected member from the table model
+            
             Member member = memberFrame.getMemberAt(selectedRow);
             if (member != null) {
                 int confirm = JOptionPane.showConfirmDialog(
