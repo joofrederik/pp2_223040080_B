@@ -23,7 +23,7 @@ public class JenisMemberButtonDeleteActionListener implements ActionListener {
         if (selectedRow == -1) {
             jenisMemberFrame.showAlert("Silakan pilih member yang ingin dihapus.");
         } else {
-            // Get selected member from the table model
+            
             JenisMember jenisMember = jenisMemberFrame.getJenisMemberAt(selectedRow);
             if (jenisMember != null) {
                 int confirm = JOptionPane.showConfirmDialog(
